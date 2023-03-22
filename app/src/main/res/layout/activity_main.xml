@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/test_spplash"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTopp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_spalash2"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/purple_200" />
+
+    <ImageView
+        android:id="@+id/ivDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitEnd"
+        android:src="@drawable/mosque"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="#E68E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lantern_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewCounterDown"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lantern_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewCounterDown"
+        app:tint="#8E75DF" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewCounterDown"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_105sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:cardBackgroundColor="#19132B"
+        app:cardCornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivDown"
+        app:strokeColor="@color/purple_200"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <TextView
+                android:id="@+id/textCounterTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawalmedium"
+                android:text="شهرُ الرحمة يقترب: فرحة الانتظار لرمضان"
+                android:textColor="#8E75DF"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toTopOf="@id/ivTextHour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ivTextDay"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:src="@drawable/shape"
+                app:layout_constraintBottom_toTopOf="@id/dayText"
+                app:layout_constraintEnd_toStartOf="@id/ivTextHour"
+                app:layout_constraintStart_toStartOf="@+id/textCounterTop"
+                app:layout_constraintTop_toBottomOf="@id/textCounterTop"
+                app:tint="#8E75DF" />
+
+            <TextView
+                android:id="@+id/tvTextDay"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/tajawalmedium"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#8E75DF"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@id/ivTextDay"
+                app:layout_constraintEnd_toEndOf="@id/ivTextDay"
+                app:layout_constraintStart_toStartOf="@+id/ivTextDay"
+                app:layout_constraintTop_toTopOf="@id/ivTextDay" />
+
+            <TextView
+                android:id="@+id/dayText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/tajawalmedium"
+                android:gravity="center"
+                android:text="يوم"
+                android:textColor="#8E75DF"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivTextHour"
+                app:layout_constraintStart_toStartOf="@+id/textCounterTop"
+                app:layout_constraintTop_toBottomOf="@id/ivTextHour" />
+
+            <TextView
+                android:id="@+id/hourText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/tajawalmedium"
+                android:gravity="center"
+                android:text="ساعة"
+                android:textColor="#8E75DF"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ivTextHour"
+                app:layout_constraintStart_toStartOf="@+id/ivTextHour"
+                app:layout_constraintTop_toBottomOf="@id/ivTextHour" />
+
+            <TextView
+                android:id="@+id/minText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/tajawalmedium"
+                android:gravity="center"
+                android:text="دقية"
+                android:textColor="#8E75DF"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ivTextSec"
+                app:layout_constraintStart_toStartOf="@+id/ivTextSec"
+                app:layout_constraintTop_toBottomOf="@id/ivTextSec" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="90"
+                android:src="@drawable/menu_dots"
+                app:layout_constraintBottom_toBottomOf="@+id/ivTextHour"
+                app:layout_constraintEnd_toStartOf="@+id/ivTextHour"
+                app:layout_constraintStart_toEndOf="@+id/ivTextDay"
+                app:layout_constraintTop_toTopOf="@+id/ivTextHour"
+                app:tint="#8E75DF" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="90"
+                android:src="@drawable/menu_dots"
+                app:layout_constraintBottom_toBottomOf="@+id/ivTextHour"
+                app:layout_constraintEnd_toStartOf="@+id/ivTextSec"
+                app:layout_constraintStart_toEndOf="@+id/ivTextHour"
+                app:layout_constraintTop_toTopOf="@+id/ivTextHour"
+                app:tint="#8E75DF" />
+
+            <ImageView
+                android:id="@+id/ivTextHour"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:src="@drawable/shape"
+                app:layout_constraintBottom_toTopOf="@id/hourText"
+                app:layout_constraintEnd_toStartOf="@id/ivTextSec"
+                app:layout_constraintStart_toEndOf="@+id/ivTextDay"
+                app:layout_constraintTop_toBottomOf="@id/textCounterTop"
+                app:tint="#8E75DF" />
+
+            <TextView
+                android:id="@+id/tvTextHour"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/tajawalmedium"
+                android:gravity="center"
+                android:text="17"
+                android:textColor="#8E75DF"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@id/ivTextHour"
+                app:layout_constraintEnd_toStartOf="@id/ivTextHour"
+                app:layout_constraintStart_toEndOf="@+id/ivTextHour"
+                app:layout_constraintTop_toTopOf="@id/ivTextHour" />
+
+            <ImageView
+                android:id="@+id/ivTextSec"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:src="@drawable/shape"
+                app:layout_constraintBottom_toTopOf="@id/minText"
+
+                app:layout_constraintEnd_toEndOf="@+id/textCounterTop"
+                app:layout_constraintStart_toEndOf="@+id/ivTextHour"
+
+                app:layout_constraintTop_toBottomOf="@id/textCounterTop"
+                app:tint="#8E75DF" />
+
+            <TextView
+                android:id="@+id/tvTextSec"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/tajawalmedium"
+                android:gravity="center"
+
+                android:src="@drawable/shape"
+                android:text="43"
+                android:textColor="#8E75DF"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@id/ivTextSec"
+                app:layout_constraintEnd_toEndOf="@+id/ivTextSec"
+                app:layout_constraintStart_toStartOf="@id/ivTextSec"
+                app:layout_constraintTop_toTopOf="@id/ivTextSec"
+                app:tint="#8E75DF" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="392dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="372dp"
+        android:layout_marginBottom="408dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="372dp"
+        android:layout_marginBottom="512dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="460dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="500dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="156dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="216dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="500dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="164dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="92dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="216dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="356dp"
+        android:layout_marginBottom="188dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="180dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="460dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="408dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="460dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="400dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="408dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="116dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="216dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="216dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginBottom="128dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="292dp"
+        android:layout_marginBottom="488dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/star_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/moon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="424dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/moon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginEnd="340dp"
+        android:layout_marginBottom="116dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/moon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="832dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/moon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="428dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/moon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#8E75DF" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginBottom="144dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lantern_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#8E75DF" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
